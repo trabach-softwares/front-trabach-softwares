@@ -5,89 +5,123 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px; /* Altura fixa do menu */
+  background: linear-gradient(to left, #305061, var(--primary-color));
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+
+/* Menu fixo no topo para dispositivos maiores */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: linear-gradient(to left, #305061, var(--primary-color));
   z-index: 1000;
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  height: 180px;
   box-sizing: border-box;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  justify-content: center;
+  flex-direction: row;
 }
 
-/* Botão de abrir o menu */
-.menu-button {
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: var(--text-color);
-  cursor: pointer;
-  margin-right: 10px;
+/* Logo no lado esquerdo */
+.logo-container {
+  position: absolute;
+  left: 10px; /* Ajuste conforme necessário */
 }
 
-/* Navegação principal */
-.menu {
-  position: fixed;
-  top: 0;
-  left: -250px; /* Inicialmente fora da tela */
-  width: 250px;
-  height: 100vh;
-  background: linear-gradient(to left, #305061, var(--primary-color));
-  transition: left 0.3s ease;
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 1001;
+.logo {
+  height: 170px;
+  width: auto;
 }
 
-.menu.open {
-  left: 0; /* Abre o menu */
-}
-
+/* Centralização dos links de navegação */
 .menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Centraliza os links horizontalmente */
+  flex-grow: 1; /* Faz com que a lista de links ocupe o espaço disponível */
 }
 
 .menu ul li {
-  margin: 20px 0;
+  margin: 0 15px;
 }
 
 .menu ul li a {
   color: var(--text-color);
   text-decoration: none;
   padding: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  display: block;
+  font-size: 22px;
   transition: color 0.3s ease;
+  font-weight: 600;
 }
 
 .menu ul li a:hover {
   color: var(--highlight-color);
 }
 
-/* Botão de fechar o menu */
-.close-button {
+/* Botão de abrir e fechar menu */
+.menu-button, .close-button {
   font-size: 24px;
   background: none;
   border: none;
   color: var(--text-color);
   cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1002;
+  padding: 10px;
 }
 
-/* Ajuste para a largura da logo */
-.logo {
-  width: 200px; /* Ajuste a largura da logo conforme necessário */
+.menu-button {
+  display: none;
 }
 
-/* Responsividade */
+.close-button {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .menu-wrapper {
-    height: 50px;
+  /* Menu vertical para dispositivos menores */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 100%;
+    background: linear-gradient(to left, #305061, var(--primary-color));
+    transform: translateX(-100%);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  }
+
+  .logo-container {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    height: 120px; /* Ajuste a altura da logo para o menu vertical */
+  }
+
+  .menu ul {
+    margin-left: 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+  }
+
+  .menu.open {
+    transform: translateX(0);
   }
 
   .menu-button {
@@ -96,25 +130,39 @@
 
   .close-button {
     display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+  .menu-button, .close-button {
+    display: none;
   }
 
   .logo-container {
     position: static;
-    margin-bottom: 20px;
   }
 
   .menu ul {
-    margin-left: 0;
-    align-items: flex-start;
+    flex-direction: row;
+    margin-left: auto; /* Alinha os links centralizados */
+    margin-right: auto; /* Alinha os links centralizados */
   }
 
-  .menu.open {
-    transform: translateX(0);
+  .menu ul li {
+    margin: 0 15px;
   }
 }

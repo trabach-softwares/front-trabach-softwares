@@ -9,7 +9,7 @@
     <nav :class="{ 'open': isMenuOpen }" class="menu">
       <div class="logo-container">
         <router-link to="/">
-          <img src="../assets/logos/svg/12.svg" alt="Logo" class="logo" />
+          <img src="../assets/logos/svg/24.svg" alt="Logo" class="logo" />
         </router-link>
       </div>
       
@@ -31,6 +31,7 @@ export default {
   data() {
     return {
       isMenuOpen: false,
+      lastScrollTop: 0,
     };
   },
   methods: {
@@ -39,6 +40,19 @@ export default {
     },
     closeMenu() {
       this.isMenuOpen = false;
+    },
+    handleScroll() {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollTop > this.lastScrollTop) {
+        // Rolando para baixo
+        if (!this.isMenuOpen) {
+          this.$refs.menuWrapper.style.top = `-${this.$refs.menuWrapper.offsetHeight}px`;
+        }
+      } else {
+        // Rolando para cima
+        this.$refs.menuWrapper.style.top = '0';
+      }
+      this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Para evitar valores negativos
     },
     handleClickOutside(event) {
       const menuWrapper = this.$refs.menuWrapper;
@@ -49,9 +63,11 @@ export default {
   },
   mounted() {
     document.addEventListener('click', this.handleClickOutside);
+    window.addEventListener('scroll', this.handleScroll);
   },
   beforeUnmount() {
     document.removeEventListener('click', this.handleClickOutside);
+    window.removeEventListener('scroll', this.handleScroll);
   },
 };
 </script>

@@ -44,8 +44,8 @@ export default {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 40px;
+  margin-bottom: 0px;
 }
 
 .hero-content p {
