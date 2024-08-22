@@ -7,20 +7,27 @@
         <router-link to="/informacoes">Informações</router-link>
       </nav>
     </header>
-    
-    <router-view/>
 
-    <footer>
-      © 2024 - Meu Projeto Vue
-    </footer>
+    <main class="main-content">
+      <router-view />
+    </main>
+
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from './components/Footer.vue';
+
 export default {
-  name: 'App'
-}
+  name: 'App',
+  components: {
+    Footer,
+  },
+};
 </script>
 
-<style src="./assets/styles/menu.css"></style>
-<style src="./assets/styles/footer.css"></style>
+<style src="@/assets/styles/global.css"></style>
+<style src="@/assets/styles/menu.css"></style>
+<style src="@/assets/styles/main-content.css"></style>
+<style src="@/assets/styles/footer.css"></style> <!-- Se ainda não estiver no seu projeto -->

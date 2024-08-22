@@ -1,0 +1,49 @@
+/* assets/styles/global.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Responsividade para monitores grandes */
+@media (min-width: 2560px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Responsividade para desktops grandes */
+@media (min-width: 1440px) and (max-width: 2560px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Responsividade para desktops padrão */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Responsividade para tablets e notebooks pequenos */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* Responsividade para smartphones grandes */
+@media (min-width: 480px) and (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+/* Responsividade para smartphones pequenos */
+@media (max-width: 480px) {
+    body {
+        font-size: 8px;
+    }
+}
