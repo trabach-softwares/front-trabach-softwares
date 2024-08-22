@@ -19,6 +19,12 @@
   justify-content: center;
 }
 
+footer * {
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit; /* Usa a cor do texto do footer */
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -67,6 +73,22 @@
   .footer-social {
     margin-bottom: var(--margin-small); /* Margem usando variável */
   }
+}
+
+/* Estilos para a localização e o telefone, sem hiperlinks */
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-info span {
+  color: var(--footer-text-color); /* Usa a mesma cor que o texto do footer */
+}
+
+/* Estilo específico para o texto de copyright */
+.footer-copyright {
+  color: var(--footer-text-color); /* Usa a mesma cor que o texto do footer */
 }
 
 /* Responsividade para monitores grandes */

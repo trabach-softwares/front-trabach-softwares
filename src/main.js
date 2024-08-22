@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import store from './store'; // Importa o store
+import router from './router'; // Certifique-se de que o caminho está correto
 
 createApp(App)
-  .use(store) // Adiciona o store
+  .use(router)
   .mount('#app');

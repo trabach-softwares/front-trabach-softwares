@@ -1,8 +1,9 @@
-/* assets/styles/menu.css */
-
 @import './variaveis.css';
 
-/* Estilo geral do menu */
+.menu-wrapper {
+  position: relative;
+}
+
 .menu {
     position: fixed;
     top: 0;
@@ -10,143 +11,111 @@
     width: 100%;
     background-color: var(--primary-color);
     z-index: 1000;
-    padding: 10px;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-/* Estilo para o logo do menu */
-.menu-logo {
-    flex: 1;
-}
-
-.menu-logo-img {
-    height: 40px; /* Ajuste conforme necessário */
-    border: 1px solid red; /* Adicione uma borda para verificar se a imagem está sendo carregada */
-
-}
-
-/* Estilo para o botão de toggle do menu */
-.menu-toggle {
-    display: none; /* Ocultar o botão em telas grandes */
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-}
-
-.menu-toggle-icon {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    display: block;
-    position: relative;
-    transition: background-color 0.3s ease;
-}
-
-.menu-toggle-icon::before,
-.menu-toggle-icon::after {
-    content: '';
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    display: block;
-    position: absolute;
-    left: 0;
-    transition: transform 0.3s ease;
-}
-
-.menu-toggle-icon::before {
-    top: -8px;
-}
-
-.menu-toggle-icon::after {
-    top: 8px;
-}
-
-/* Estilo para os itens do menu */
-.menu-items {
-    display: flex;
-    gap: 20px;
-}
-
-.menu-items a {
-    color: white;
-    text-decoration: none;
+    height: auto;
+    box-sizing: border-box;
     padding: 10px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    height: 130px;
 }
 
-/* Estilo para o menu ativado (oculto) */
-.menu-items.active {
+/* Logo no canto superior esquerdo */
+.logo-container {
+  position: absolute;
+  top: 10px; /* Ajuste conforme necessário */
+  left: 10px; /* Ajuste conforme necessário */
+}
+
+.logo {
+    height: 120px;
+    left: 60px;
+    position: relative;}
+
+/* Links de navegação alinhados à metade da altura da logo */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 70px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
 }
 
-/* Responsividade para telas menores */
+.menu ul li {
+  margin: 10px 0;
+}
+
+.menu ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu ul li a:hover {
+  color: var(--highlight-color); /* Ajuste conforme necessário */
+}
+
+/* Menu aberto */
+.menu.open {
+  transform: translateY(0);
+}
+
+.menu-button, .close-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-button {
+  display: block;
+}
+
+.close-button {
+  display: none;
+}
+
 @media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
 
-    .menu-items {
-        display: none; /* Ocultar o menu por padrão */
-        width: 100%;
-        text-align: center;
-    }
+  .logo-container {
+    position: static;
+    margin-bottom: 20px;
+  }
 
-    .menu-items.active {
-        display: flex; /* Mostrar o menu quando ativado */
-    }
+  .menu ul {
+    margin-left: 0;
+    align-items: flex-start;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
-}
+  .menu.open {
+    transform: translateY(0);
+  }
 
-/* Responsividade para monitores grandes */
-@media (min-width: 2560px) {
-    .menu a {
-        font-size: 24px;
-    }
-}
+  .menu-button {
+    display: none;
+  }
 
-/* Responsividade para desktops grandes */
-@media (min-width: 1440px) and (max-width: 2560px) {
-    .menu a {
-        font-size: 20px;
-    }
-}
-
-/* Responsividade para desktops padrão */
-@media (min-width: 1024px) and (max-width: 1440px) {
-    .menu a {
-        font-size: 18px;
-    }
-}
-
-/* Responsividade para tablets e notebooks pequenos */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .menu a {
-        font-size: 16px;
-    }
-}
-
-/* Responsividade para smartphones grandes */
-@media (min-width: 480px) and (max-width: 768px) {
-    .menu a {
-        font-size: 14px;
-    }
-}
-
-/* Responsividade para smartphones pequenos */
-@media (max-width: 480px) {
-    .menu a {
-        font-size: 12px;
-    }
+  .close-button {
+    display: block;
+  }
 }

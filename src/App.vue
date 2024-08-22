@@ -1,17 +1,16 @@
 <template>
   <div id="app">
+    <!-- Cabeçalho com o Menu -->
     <header>
-      <nav class="menu">
-        <router-link to="/">Home</router-link>
-        <router-link to="/contato">Contato</router-link>
-        <router-link to="/informacoes">Informações</router-link>
-      </nav>
+      <Menu />
     </header>
 
+    <!-- Conteúdo principal da aplicação -->
     <main class="main-content">
       <router-view />
     </main>
 
+    <!-- Rodapé -->
     <Footer />
   </div>
 </template>
@@ -32,4 +31,4 @@ export default {
 <style src="@/assets/styles/global.css"></style>
 <style src="@/assets/styles/menu.css"></style>
 <style src="@/assets/styles/main-content.css"></style>
-<style src="@/assets/styles/footer.css"></style> <!-- Se ainda não estiver no seu projeto -->
+<style src="@/assets/styles/footer.css"></style>
