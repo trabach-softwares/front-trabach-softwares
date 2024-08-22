@@ -39,7 +39,7 @@ export default {
 .hero-content {
   color: #fff;
   text-align: center;
-  padding: 0 20px; /* Padding horizontal */
+  padding: 120px 20px;
   margin-top: 0; /* Remove a margem superior para o ajuste */
 }
 
@@ -70,6 +70,10 @@ export default {
     padding-top: 60px; /* Aumenta o espaço para o menu em telas menores */
   }
 
+  .hero-content {
+    padding: 0px 30px! important;
+  }
+
   .hero-content h1 {
     font-size: 1.8rem; /* Ajusta o tamanho da fonte para telas menores */
   }
@@ -87,6 +91,10 @@ export default {
   .hero-section {
     height: 20em; /* Ajusta a altura para telas muito pequenas */
     padding-top: 70px; /* Aumenta o espaço para o menu em telas muito pequenas */
+  }
+
+  .hero-content {
+    padding: 0px 30px! important;
   }
 
   .hero-content h1 {

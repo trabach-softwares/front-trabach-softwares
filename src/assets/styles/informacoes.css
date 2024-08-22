@@ -5,8 +5,9 @@
 .informacoes-wrapper {
   display: flex;
   justify-content: center;
-  padding: 90px 20px 0px;  
+  padding: 200px 20px 60px;
   box-sizing: border-box;
+  background: linear-gradient(to bottom, #a9c2d7, #d1d7db);
 }
 
 .informacoes-box {
@@ -39,6 +40,7 @@
 
 .informacoes-item {
   margin-bottom: var(--margin-medium); /* Espaçamento entre os itens */
+  text-align: center;
 }
 
 .informacoes-item h2 {
@@ -70,6 +72,9 @@
   .informacoes-header p,
   .informacoes-item p {
     font-size: 1rem; /* Ajusta o tamanho da fonte */
+  }
+  .informacoes-wrapper {
+    padding: 75px 20px 0px ! important;
   }
 }
 

@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; /* Centraliza os links horizontalmente */
+  justify-content: flex-end;
   flex-grow: 1; /* Faz com que a lista de links ocupe o espaço disponível */
 }
 
@@ -92,7 +92,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 130px;
+    width: 150px;
     height: 100%;
     background: linear-gradient(to left, #305061, var(--primary-color));
     transform: translateX(-100%);
@@ -112,8 +112,9 @@
 
   .menu ul {
     margin-left: 0;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .menu ul li {
@@ -130,9 +131,9 @@
 
   .close-button {
     display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: fixed;
+    top: -8px;
+    right: 0px;
   }
 }
 
