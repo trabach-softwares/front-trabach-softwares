@@ -1,0 +1,16 @@
+/* footer.css */
+
+@import './variaveis.css';
+
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 20px;
+    text-align: center;
+    color: var(--font-color);
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed; /* Torna o footer fixo */
+    bottom: 0; /* Fixa o footer na parte inferior */
+    left: 0; /* Fixa o footer à esquerda */
+    z-index: 1000; /* Garante que o footer fique sobre outros elementos */
+}

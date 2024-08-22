@@ -1,0 +1,26 @@
+/* menu.css */
+
+@import './variaveis.css';
+
+.menu {
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed; /* Torna o menu fixo */
+    top: 0; /* Fixa o menu no topo */
+    left: 0; /* Fixa o menu à esquerda */
+    z-index: 1000; /* Garante que o menu fique sobre outros elementos */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: var(--secondary-color);
+}
