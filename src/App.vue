@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app-container">
     <!-- Cabeçalho com o Menu -->
     <header>
       <Menu />
@@ -32,3 +32,15 @@ export default {
 <style src="@/assets/styles/menu.css"></style>
 <style src="@/assets/styles/main-content.css"></style>
 <style src="@/assets/styles/footer.css"></style>
+
+<style scoped>
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o container ocupe pelo menos a altura da tela */
+}
+
+.main-content {
+  flex: 1; /* Permite que o conteúdo principal cresça e empurre o footer para o fundo */
+}
+</style>

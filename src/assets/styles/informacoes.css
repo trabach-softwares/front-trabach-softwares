@@ -1,0 +1,75 @@
+/* informacoes.css */
+
+@import './variaveis.css'; /* Importa as variáveis CSS */
+
+.informacoes-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 90px 20px 0px;  
+  box-sizing: border-box;
+}
+
+.informacoes-box {
+  width: 60%;
+  background-color: #ffffff; /* Cor de fundo da caixa */
+  padding: var(--padding-medium); /* Padding interno */
+  box-shadow: var(--box-shadow); /* Sombra para destaque */
+  border-radius: var(--border-radius-medium); /* Bordas arredondadas */
+}
+
+.informacoes-header {
+  text-align: center;
+  margin-bottom: var(--margin-medium); /* Espaçamento abaixo do cabeçalho */
+}
+
+.informacoes-header h1 {
+  font-size: 2rem;
+  color: var(--primary-color); /* Cor principal */
+}
+
+.informacoes-header p {
+  font-size: 1.2rem;
+  color: var(--font-color);
+}
+
+.informacoes-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.informacoes-item {
+  margin-bottom: var(--margin-medium); /* Espaçamento entre os itens */
+}
+
+.informacoes-item h2 {
+  font-size: 1.5rem;
+  color: var(--primary-accent); /* Cor de destaque */
+}
+
+.informacoes-item p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.section-divider {
+  border: 0;
+  border-top: 1px solid var(--primary-color); /* Linha separadora com a cor principal */
+  margin: var(--margin-medium) 0; /* Espaçamento acima e abaixo da linha */
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .informacoes-box {
+    width: 90%; /* Ajusta a largura da caixa em dispositivos menores */
+  }
+
+  .informacoes-header h1 {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .informacoes-header p,
+  .informacoes-item p {
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+  }
+}
+

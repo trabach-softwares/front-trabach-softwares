@@ -1,14 +1,9 @@
-/* Footer.css */
+/* footer.css */
 
 @import './variaveis.css';
 
-/* assets/styles/footer.css */
-
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--primary-color); /* Usando a cor primária */
+  background-color: var(--footer-bg-color); /* Usando a cor primária */
   color: var(--footer-font-color); /* Cor do texto do rodapé */
   padding: var(--padding-small) 0; /* Padding usando variável */
   box-sizing: border-box;

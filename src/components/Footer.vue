@@ -2,7 +2,7 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-location">
-          <a href="https://maps.app.goo.gl/MQbYFzjxTSALuqQr8" target="_blank" class="footer-link">
+          <a href="https://maps.app.goo.gl/3DJRyF9eUyeB3qSE8" target="_blank" class="footer-link">
             <img src="../assets/logos/applicativos/localizacao-icon.svg" alt="Endereço" class="footer-icon"/> Trabach Softwares - Soluções para o Mundo!
           </a>
         </div>

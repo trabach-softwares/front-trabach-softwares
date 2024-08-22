@@ -1,28 +1,22 @@
 :root {
     /* Cores Primárias */
-    --primary-color: #34cadb;  /* Cor principal do tema */
-    --primary-light: #5ec6e0; /* Tom mais claro do azul principal */
-    --primary-dark: #1d9ab6;  /* Tom mais escuro do azul principal */
-    --primary-darker: #147a8f; /* Tom ainda mais escuro do azul principal */
-    --primary-accent: #00a8e1; /* Cor de destaque/acento no tema */
-    
-    /* Cores Secundárias */
-    --secondary-color: #2ecc71; /* Cor secundária do tema */
-    --secondary-light: #3bce79; /* Tom mais claro do verde secundário */
-    --secondary-dark: #26a65b;  /* Tom mais escuro do verde secundário */
+    --primary-color: #519CC7;  /* Cor principal do tema (Menu/Header) */
+    --primary-light: #96ABB6; /* Tom mais claro para o footer */
+    --primary-dark: #305061;  /* Tom mais escuro para variações */
+    --primary-accent: #7AD0FF; /* Cor de destaque/acento (Links Hover) */
     
     /* Cores de Texto */
-    --font-color: #333; /* Cor do texto padrão */
-    --header-font-color: #ffffff; /* Cor do texto do cabeçalho */
-    --footer-font-color: #ffffff; /* Cor do texto do rodapé */
-    --highlight-color: black;
-    --text-color: black;
-    
+    --font-color: black; /* Cor do texto principal */
+    --header-font-color: white; /* Cor do texto do cabeçalho */
+    --footer-font-color: #96ABB6; /* Cor do texto no footer */
+    --highlight-color: black; /* Cor de destaque no texto */
+    --text-color: black; /* Cor do texto padrão */
+
     /* Cores de Fundo */
     --background-color: #ffffff; /* Cor de fundo principal */
-    --footer-bg-color: #f1f1f1; /* Cor de fundo do rodapé */
-    --header-bg-color: #2c3e50; /* Cor de fundo do cabeçalho */
-    
+    --footer-bg-color: #3E4E56; /* Cor de fundo do footer */
+    --header-bg-color: #519CC7; /* Cor de fundo do header */
+
     /* Cores de Bordas */
     --border-color: #dddddd; /* Cor das bordas padrão */
     --input-border-color: #cccccc; /* Cor das bordas de inputs */
@@ -31,7 +25,8 @@
     --base-font-size: 16px; /* Tamanho da fonte base */
     --heading-font-size: 24px; /* Tamanho da fonte dos cabeçalhos */
     --small-font-size: 12px; /* Tamanho da fonte para texto pequeno */
-    
+    --footer-font-size: 14px; /* Tamanho da fonte no footer */
+
     /* Espaçamentos */
     --padding-small: 8px; /* Padding pequeno */
     --padding-medium: 16px; /* Padding médio */
@@ -51,4 +46,7 @@
     /* Transições */
     --transition-duration: 0.3s; /* Duração padrão para transições */
     --transition-ease: ease-in-out; /* Tipo de transição */
+
+    /* Footer */
+    --background-footer: #3e4e56;
 }

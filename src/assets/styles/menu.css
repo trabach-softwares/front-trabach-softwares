@@ -1,4 +1,4 @@
-@import './variaveis.css';
+@import '../styles/variaveis.css';
 
 .menu-wrapper {
   position: relative;
@@ -9,7 +9,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--primary-color);
+    background: linear-gradient(to left, #305061, var(--primary-color));
+    /* Adicione outros estilos necessários para o menu */    
     z-index: 1000;
     display: flex;
     align-items: center;
