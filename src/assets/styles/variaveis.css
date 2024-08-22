@@ -1,8 +1,52 @@
-/* variaveis.css */
-
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --font-color: #333;
-    --footer-bg-color: #f1f1f1;
+    /* Cores Primárias */
+    --primary-color: #34cadb;  /* Cor principal do tema */
+    --primary-light: #5ec6e0; /* Tom mais claro do azul principal */
+    --primary-dark: #1d9ab6;  /* Tom mais escuro do azul principal */
+    --primary-darker: #147a8f; /* Tom ainda mais escuro do azul principal */
+    --primary-accent: #00a8e1; /* Cor de destaque/acento no tema */
+    
+    /* Cores Secundárias */
+    --secondary-color: #2ecc71; /* Cor secundária do tema */
+    --secondary-light: #3bce79; /* Tom mais claro do verde secundário */
+    --secondary-dark: #26a65b;  /* Tom mais escuro do verde secundário */
+    
+    /* Cores de Texto */
+    --font-color: #333; /* Cor do texto padrão */
+    --header-font-color: #ffffff; /* Cor do texto do cabeçalho */
+    --footer-font-color: #ffffff; /* Cor do texto do rodapé */
+    
+    /* Cores de Fundo */
+    --background-color: #ffffff; /* Cor de fundo principal */
+    --footer-bg-color: #f1f1f1; /* Cor de fundo do rodapé */
+    --header-bg-color: #2c3e50; /* Cor de fundo do cabeçalho */
+    
+    /* Cores de Bordas */
+    --border-color: #dddddd; /* Cor das bordas padrão */
+    --input-border-color: #cccccc; /* Cor das bordas de inputs */
+
+    /* Fontes */
+    --base-font-size: 16px; /* Tamanho da fonte base */
+    --heading-font-size: 24px; /* Tamanho da fonte dos cabeçalhos */
+    --small-font-size: 12px; /* Tamanho da fonte para texto pequeno */
+    
+    /* Espaçamentos */
+    --padding-small: 8px; /* Padding pequeno */
+    --padding-medium: 16px; /* Padding médio */
+    --padding-large: 24px; /* Padding grande */
+    --margin-small: 8px; /* Margin pequeno */
+    --margin-medium: 16px; /* Margin médio */
+    --margin-large: 24px; /* Margin grande */
+    
+    /* Bordas */
+    --border-radius-small: 4px; /* Bordas arredondadas pequenas */
+    --border-radius-medium: 8px; /* Bordas arredondadas médias */
+    --border-radius-large: 12px; /* Bordas arredondadas grandes */
+    
+    /* Sombra */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra padrão para caixas */
+    
+    /* Transições */
+    --transition-duration: 0.3s; /* Duração padrão para transições */
+    --transition-ease: ease-in-out; /* Tipo de transição */
 }

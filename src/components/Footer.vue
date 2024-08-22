@@ -1,9 +1,14 @@
 <template>
     <footer class="footer">
       <div class="footer-content">
+        <div class="footer-location">
+          <a href="https://maps.app.goo.gl/MQbYFzjxTSALuqQr8" target="_blank" class="footer-link">
+            <img src="../assets/logos/applicativos/localizacao-icon.svg" alt="Endereço" class="footer-icon"/> Trabach Softwares - Soluções para o Mundo!
+          </a>
+        </div>
         <div class="footer-contact">
-          <a href="https://wa.me/5527997725101" target="_blank" class="footer-link">
-            <img src="../assets/logos/applicativos/chamada-telefonica-icon.svg" alt="Telefone" class="footer-icon"/> +55 27 99772-5101
+          <a href="https://wa.me/5527996253020" target="_blank" class="footer-link">
+            <img src="../assets/logos/applicativos/chamada-telefonica-icon.svg" alt="Telefone" class="footer-icon"/> +55 27 99625-3020
           </a>
         </div>
         <div class="footer-social">
@@ -15,11 +20,6 @@
           </a>
           <a href="https://spotify.com" target="_blank" class="footer-social-link">
             <img src="../assets/logos/applicativos/spotify-logo.svg" class="footer-social-icon"/>
-          </a>
-        </div>
-        <div class="footer-location">
-          <a href="https://maps.app.goo.gl/MQbYFzjxTSALuqQr8" target="_blank" class="footer-link">
-            <img src="../assets/logos/applicativos/localizacao-icon.svg" alt="Endereço" class="footer-icon"/> Trabach Softwares - Soluções para o Mundo!
           </a>
         </div>
       </div>

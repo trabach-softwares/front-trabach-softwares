@@ -1,64 +1,112 @@
 /* Footer.css */
 
 @import './variaveis.css';
- 
+
 /* assets/styles/footer.css */
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary-color); /* Usando a cor primária */
+  color: var(--footer-font-color); /* Cor do texto do rodapé */
+  padding: var(--padding-small) 0; /* Padding usando variável */
+  box-sizing: border-box;
+  height: 115px; /* Ajuste a altura conforme necessário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 95%;
+  padding: 0 var(--padding-medium); /* Padding usando variável */
+  margin: var(--margin-medium) 0 0; /* Margem usando variável */
 }
 
 .footer-content .footer-icon,
 .footer-content .footer-social-icon {
-    width: 30px;
-    height: 30px;
+  width: 20px;
+  height: 20px;
+  margin-right: var(--padding-small); /* Margem usando variável */
+  vertical-align: middle;
+}
+
+.footer-contact {
+  flex: 1; /* Permite que a .footer-contact use o espaço disponível */
+  text-align: center; /* Centraliza o texto dentro da .footer-contact */
+}
+
+.footer-location,
+.footer-contact,
+.footer-social {
+  flex: 1;
+  text-align: center; /* Centraliza o texto dentro de cada seção */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: var(--padding-small) var(--padding-medium); /* Padding usando variável */
+}
+
+/* Responsividade para centralizar conteúdo em dispositivos menores */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-location,
+  .footer-contact,
+  .footer-social {
+    margin-bottom: var(--margin-small); /* Margem usando variável */
+  }
 }
 
 /* Responsividade para monitores grandes */
 @media (min-width: 2560px) {
-    .footer-content {
-        font-size: 20px;
-    }
+  .footer-content {
+    font-size: var(--heading-font-size); /* Usando variável para tamanho da fonte */
+  }
 }
 
 /* Responsividade para desktops grandes */
 @media (min-width: 1440px) and (max-width: 2560px) {
-    .footer-content {
-        font-size: 18px;
-    }
+  .footer-content {
+    font-size: calc(var(--heading-font-size) - 4px); /* Tamanho da fonte menor */
+  }
 }
 
 /* Responsividade para desktops padrão */
 @media (min-width: 1024px) and (max-width: 1440px) {
-    .footer-content {
-        font-size: 16px;
-    }
+  .footer-content {
+    font-size: calc(var(--heading-font-size) - 8px); /* Tamanho da fonte menor */
+  }
 }
 
 /* Responsividade para tablets e notebooks pequenos */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .footer-content {
-        font-size: 14px;
-    }
+  .footer-content {
+    font-size: calc(var(--heading-font-size) - 12px); /* Tamanho da fonte menor */
+  }
 }
 
 /* Responsividade para smartphones grandes */
 @media (min-width: 480px) and (max-width: 768px) {
-    .footer-content {
-        font-size: 12px;
-    }
+  .footer-content {
+    font-size: calc(var(--heading-font-size) - 16px); /* Tamanho da fonte menor */
+  }
 }
 
 /* Responsividade para smartphones pequenos */
 @media (max-width: 480px) {
-    .footer-content {
-        font-size: 10px;
-    }
+  .footer-content {
+    font-size: calc(var(--heading-font-size) - 20px); /* Tamanho da fonte menor */
+  }
 }

@@ -1,23 +1,24 @@
 @import './base.css';
+@import './variaveis.css'; /* Importa as variáveis CSS */
 
 #app {
-  max-width: 1280px;
+  max-width: var(--max-width); /* Usando variável para a largura máxima */
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--padding-medium); /* Padding usando variável */
   font-weight: normal;
 }
 
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: var(--link-color); /* Usando variável para a cor do link */
   transition: 0.4s;
-  padding: 3px;
+  padding: var(--padding-small); /* Padding usando variável */
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: var(--link-hover-bg); /* Usando variável para a cor de fundo do hover */
   }
 }
 
@@ -29,7 +30,7 @@ a,
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    grid-template-columns: repeat(2, 1fr); /* Simplificado para usar repeat */
+    padding: 0 var(--padding-medium); /* Padding usando variável */
   }
 }

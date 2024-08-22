@@ -1,49 +1,55 @@
 /* assets/styles/global.css */
 
+@import './variaveis.css'; /* Importa as variáveis CSS */
+
+/* Estilos Gerais */
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-size: var(--base-font-size); /* Tamanho de fonte base */
+    color: var(--font-color); /* Cor do texto padrão */
+    background-color: var(--background-color); /* Cor de fundo principal */
 }
 
 /* Responsividade para monitores grandes */
 @media (min-width: 2560px) {
     body {
-        font-size: 18px;
+        font-size: var(--heading-font-size); /* Usando variável para tamanho de fonte */
     }
 }
 
 /* Responsividade para desktops grandes */
 @media (min-width: 1440px) and (max-width: 2560px) {
     body {
-        font-size: 16px;
+        font-size: calc(var(--heading-font-size) - 2px); /* Tamanho da fonte menor */
     }
 }
 
 /* Responsividade para desktops padrão */
 @media (min-width: 1024px) and (max-width: 1440px) {
     body {
-        font-size: 14px;
+        font-size: calc(var(--heading-font-size) - 4px); /* Tamanho da fonte menor */
     }
 }
 
 /* Responsividade para tablets e notebooks pequenos */
 @media (min-width: 768px) and (max-width: 1024px) {
     body {
-        font-size: 12px;
+        font-size: calc(var(--heading-font-size) - 6px); /* Tamanho da fonte menor */
     }
 }
 
 /* Responsividade para smartphones grandes */
 @media (min-width: 480px) and (max-width: 768px) {
     body {
-        font-size: 10px;
+        font-size: calc(var(--heading-font-size) - 8px); /* Tamanho da fonte menor */
     }
 }
 
 /* Responsividade para smartphones pequenos */
 @media (max-width: 480px) {
     body {
-        font-size: 8px;
+        font-size: calc(var(--heading-font-size) - 10px); /* Tamanho da fonte menor */
     }
 }

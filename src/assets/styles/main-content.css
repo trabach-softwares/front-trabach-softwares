@@ -1,54 +1,57 @@
 /* assets/styles/main-content.css */
 
+@import './variaveis.css'; /* Importa as variáveis CSS */
+
+/* Estilos Gerais */
 .main-content {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--padding-medium); /* Padding usando variável */
+    padding-bottom: var(--padding-medium); /* Padding usando variável */
 }
 
 /* Responsividade para monitores grandes */
 @media (min-width: 2560px) {
     .main-content {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: var(--padding-large); /* Padding maior para monitores grandes */
+        padding-bottom: var(--padding-large); /* Padding maior para monitores grandes */
     }
 }
 
 /* Responsividade para desktops grandes */
 @media (min-width: 1440px) and (max-width: 2560px) {
     .main-content {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: calc(var(--padding-medium) + 10px); /* Padding maior para desktops grandes */
+        padding-bottom: calc(var(--padding-medium) + 10px); /* Padding maior para desktops grandes */
     }
 }
 
 /* Responsividade para desktops padrão */
 @media (min-width: 1024px) and (max-width: 1440px) {
     .main-content {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: var(--padding-medium); /* Padding padrão para desktops padrão */
+        padding-bottom: var(--padding-medium); /* Padding padrão para desktops padrão */
     }
 }
 
 /* Responsividade para tablets e notebooks pequenos */
 @media (min-width: 768px) and (max-width: 1024px) {
     .main-content {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: calc(var(--padding-medium) - 10px); /* Padding menor para tablets e notebooks pequenos */
+        padding-bottom: calc(var(--padding-medium) - 10px); /* Padding menor para tablets e notebooks pequenos */
     }
 }
 
 /* Responsividade para smartphones grandes */
 @media (min-width: 480px) and (max-width: 768px) {
     .main-content {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: calc(var(--padding-medium) - 20px); /* Padding menor para smartphones grandes */
+        padding-bottom: calc(var(--padding-medium) - 20px); /* Padding menor para smartphones grandes */
     }
 }
 
 /* Responsividade para smartphones pequenos */
 @media (max-width: 480px) {
     .main-content {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: calc(var(--padding-medium) - 30px); /* Padding menor para smartphones pequenos */
+        padding-bottom: calc(var(--padding-medium) - 30px); /* Padding menor para smartphones pequenos */
     }
 }

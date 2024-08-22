@@ -2,6 +2,7 @@
 
 @import './variaveis.css';
 
+/* Estilo geral do menu */
 .menu {
     position: fixed;
     top: 0;
@@ -10,10 +11,102 @@
     background-color: var(--primary-color);
     z-index: 1000;
     padding: 10px;
-    height: auto;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo para o logo do menu */
+.menu-logo {
+    flex: 1;
+}
+
+.menu-logo-img {
+    height: 40px; /* Ajuste conforme necessário */
+    border: 1px solid red; /* Adicione uma borda para verificar se a imagem está sendo carregada */
+
+}
+
+/* Estilo para o botão de toggle do menu */
+.menu-toggle {
+    display: none; /* Ocultar o botão em telas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.menu-toggle-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle-icon::before,
+.menu-toggle-icon::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle-icon::before {
+    top: -8px;
+}
+
+.menu-toggle-icon::after {
+    top: 8px;
+}
+
+/* Estilo para os itens do menu */
+.menu-items {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para o menu ativado (oculto) */
+.menu-items.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-items {
+        display: none; /* Ocultar o menu por padrão */
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-items.active {
+        display: flex; /* Mostrar o menu quando ativado */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
 /* Responsividade para monitores grandes */
@@ -46,9 +139,6 @@
 
 /* Responsividade para smartphones grandes */
 @media (min-width: 480px) and (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-    }
     .menu a {
         font-size: 14px;
     }
@@ -56,10 +146,6 @@
 
 /* Responsividade para smartphones pequenos */
 @media (max-width: 480px) {
-    .menu {
-        flex-direction: column;
-        padding: 20px 0;
-    }
     .menu a {
         font-size: 12px;
     }
