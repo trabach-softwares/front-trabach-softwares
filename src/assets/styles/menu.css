@@ -1,97 +1,103 @@
 @import '../styles/variaveis.css';
 
 .menu-wrapper {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Altura fixa do menu */
+  background: linear-gradient(to left, #305061, var(--primary-color));
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
+/* Botão de abrir o menu */
+.menu-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Navegação principal */
 .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to left, #305061, var(--primary-color));
-    /* Adicione outros estilos necessários para o menu */    
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    height: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    transition: transform 0.3s ease;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    height: 130px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Inicialmente fora da tela */
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(to left, #305061, var(--primary-color));
+  transition: left 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1001;
 }
 
-/* Logo no canto superior esquerdo */
-.logo-container {
-  position: absolute;
-  top: 10px; /* Ajuste conforme necessário */
-  left: 10px; /* Ajuste conforme necessário */
+.menu.open {
+  left: 0; /* Abre o menu */
 }
 
-.logo {
-    height: 120px;
-    left: 60px;
-    position: relative;}
-
-/* Links de navegação alinhados à metade da altura da logo */
 .menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 70px;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu ul li {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .menu ul li a {
   color: var(--text-color);
   text-decoration: none;
   padding: 10px;
-  font-size: 16px;
-  transition: color 0.3s ease;
   font-size: 20px;
   font-weight: 600;
+  display: block;
+  transition: color 0.3s ease;
 }
 
 .menu ul li a:hover {
-  color: var(--highlight-color); /* Ajuste conforme necessário */
+  color: var(--highlight-color);
 }
 
-/* Menu aberto */
-.menu.open {
-  transform: translateY(0);
-}
-
-.menu-button, .close-button {
+/* Botão de fechar o menu */
+.close-button {
   font-size: 24px;
   background: none;
   border: none;
   color: var(--text-color);
   cursor: pointer;
-  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
 }
 
-.menu-button {
-  display: block;
+/* Ajuste para a largura da logo */
+.logo {
+  width: 200px; /* Ajuste a largura da logo conforme necessário */
 }
 
-.close-button {
-  display: none;
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
+  .menu-wrapper {
+    height: 50px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .close-button {
+    display: block;
+  }
+
   .menu {
     flex-direction: column;
     align-items: flex-start;
@@ -109,14 +115,6 @@
   }
 
   .menu.open {
-    transform: translateY(0);
-  }
-
-  .menu-button {
-    display: none;
-  }
-
-  .close-button {
-    display: block;
+    transform: translateX(0);
   }
 }
