@@ -12,7 +12,7 @@
           </a>
         </div>
         <div class="footer-social">
-          <a href="https://wa.me/5527997725101" target="_blank" class="footer-social-link">
+          <a href="https://wa.me/5527996253020" target="_blank" class="footer-social-link">
             <img src="../assets/logos/applicativos/whatsapp-logo-footer.svg" alt="whatsapp" class="footer-social-icon"/>
           </a>
           <a href="https://www.instagram.com/trabachsoftwares" target="_blank" class="footer-social-link">
